@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>En un pueblo en Madrid...</title>
+    <style>
+      .hide{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <p class = "start">Eres una niña que no tiene dinero. Estás vendiendo boletos de lotería en un café en Madrid. De repente, en el rabillo de tu ojo, tú ves un hombre.</p>
+    <button class = "start" onclick = "displayNext('manBuys')">El hombre quiere comprar un décimo.</button>
+    <button class = "start" onclick = "displayNext('manLeft')">El hombre sale el café. </button>
+    
+    <img class = "manLeft hide" src="http://wdy.h-cdn.co/assets/15/51/980x490/landscape-1450116423-gettyimages-186756083-1.jpg">
+    <p class = "manLeft hide">El hombre sale del café. Estás sola. Estás triste. Estás desesperado. Si un hombre llegara, quizás tu vida cambiaría. Pero no está en esta vida, está en una otra vida...</p>
+    
+    <img class = "manBuys hide" src= "https://www.stevenaitchison.co.uk/wp-content/uploads/happy_couple.jpg">
+    <p class = "manBuys hide">El hombre quiere comprar un décimo. Te sientes tu soledad desaparecen. Este hombre es la solucción a tu vacío en tu corazón. Si el hombre no llegara, tu vida sería triste.</p>
+
+    <script>
+      function displayNext(class1){
+        //hides button
+        var x = document.getElementsByTagName("button");
+        for (i = 0; i < x.length; i++){
+          if (x[i].classList.contains(class1)){
+            x[i].style.display = "block";
+          }
+          else{
+            x[i].style.display = "none";
+          }
+        }
+        //reveals next line based on id
+        var y = document.getElementsByClassName(class1)
+        for (i = 0; i < y.length; i++){
+          y[i].style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
